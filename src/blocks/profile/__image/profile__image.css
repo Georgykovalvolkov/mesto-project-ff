@@ -9,6 +9,30 @@
   margin: 0 29px 0 0;
 }
 
+.profile__image:hover {
+  cursor: pointer;
+  opacity: 0.4;
+  transition: 0.8s;
+}
+
+.profile__image::before {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 7%;
+  transform: translate(-50%, -50%);
+  width: 10%;
+  height: 70%;
+  opacity: 0;
+  background: transparent url("../../../images/Vector.svg") center no-repeat;
+  background-size: 26px 26px;
+}
+
+.profile__image:hover::before {
+  opacity: 1;
+  transition: 0.8s;
+}
+
 @media screen and (max-width: 740px) {
   .profile__image {
     margin: 0 10px 0 0;
