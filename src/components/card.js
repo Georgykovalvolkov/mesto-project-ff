@@ -36,7 +36,7 @@ function createCard(cardFilling, profile, deleteCard, handleImage, likeCard) {
     const cardDeleteButton = cardElement.querySelector('.card__delete-button');
     const cardLikeButton = cardElement.querySelector('.card__like-button');
     const likeNumber = cardElement.querySelector('.card__like-number');
-    const isLiked = cardFilling.likes.some((like) => profile === like._id);
+    const isLiked = cardFilling.likes.some((like) => profile['_id'] === like['_id']);
     likeNumber.textContent = cardFilling.likes.length;
     const cardId = cardFilling._id;
 
